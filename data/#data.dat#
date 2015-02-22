@@ -1,0 +1,10 @@
+5.0d0 11.0d0                  # D_r,D_z
+50 50                          # N M
+50 50 100                      # NA,NB,NC
+50 50                          # NE,ND
+0.05d0 0.05d0                  # sig sig2 these are conv
+30.0d0 0.0d0 0.0d0 30.0d0      # xAB,xAC,xAE,xAD
+30.0d0 30.0d0 0.0d0            # xBC,xBE,xBD
+0.0d0 30.0d0                   # xCE,xCD
+30.0d0                         # xED
+0.0d0  -4.596d0  0.0d0           # muAB muC muED

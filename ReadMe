@@ -1,0 +1,33 @@
+Here are some information about the program:
+
+First thing to note before looking at the code is that I don't code as neatly as others, so I apologize in advance for the mess.
+
+Main.f90:
+Is the main program, the data used for the calculations are in the data/data.dat. Things like box size and interaction parameters and such as there.
+
+The program is written for the cylindrical geometry, but you could set r_0 (distance from the center to the cylinder) to a very large number and the values calculated match those of planar geometry. I have tested this with all other code (spectral and such).
+
+For the purpose of the problem, there are two initial configurations which we are interested in,
+1- the bilayer
+2- disk
+
+you can choose which of these configurations you want in the main program, and everything should run from there, and you dont need to change anything.
+
+If you choose bilayer, you have the option of calculating the results for a single run, usually used for the subtraction method, or scan over a range of mu values to find the mu that results in (fE-fE_bulk=0).
+This can be done by setting the (once) parameter to 1 or 0 (off or on).
+
+If you choose disk, then the program will start calculating the results for different radius from the center of the cylinder and move out. The initial point would be where you set your r_0.
+
+All these results are printed on the screen and data files which can be plotted.
+
+Mod1.f90 ModfreeE.f90 and all the other mods:
+these mods contain subroutines that calculate different things, things should be working correctly, so you don't need to change anything here. I have tested the free energy and some other results with other codes, and everything seem to be working correctly.
+
+ModA.f90 ModB.f90 ModC.f90:
+So here is where the differential equation is solved using the ADI method. I have commented the modA.f90 files, so read that file, there other 2 are very similar.
+
+Plotting:
+I have set up things so that you can plot things as the program does its calculations. Plot1.p and plot3.p plot the concentration profiles to check whether you are calculating the correct configurations or if there is anything wrong.
+Plot2.p plots the fD vs R/d plot, right now it plots your (Jiajia) results and what ever is going to be calculated when you run the code for the disk.
+If you run the code for disk, let it complete 1 point before plotting.
+To see fE-fE_bulk vs mu, plot plot_bilater.p
