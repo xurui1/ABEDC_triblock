@@ -63,7 +63,7 @@ Program Main
 
   ! If ten_find is on, turn off bilayer
   bilayer=1
-  once=1
+  once=0
   disk=0
 
   !()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
@@ -95,11 +95,11 @@ Program Main
   End If
 
   ! Setting kappa and fA
-  kappaC=real(NC)/real(NA+NB+NE+ND)
-  fracA=real(NA)/real(NA+NB+NE+ND)
-  fracB=real(NB)/real(NA+NB+NE+ND)
-  fracE=real(NE)/real(NE+ND+NE+ND)
-  fracD=real(ND)/real(NA+NB+NE+ND)
+  kappaC=real(NC)/real(NA+NB)
+  fracA=real(NA)/real(NA+NB)
+  fracB=real(NB)/real(NA+NB)
+  fracE=real(NE)/real(NE+ND)
+  fracD=real(ND)/real(NE+ND)
   ! This will allocate the proper memory
   Call Allocate_mod(1)
   iter=1

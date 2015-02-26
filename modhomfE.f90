@@ -38,14 +38,14 @@ Subroutine fE_homo()
      eta_ave=eta_ave-0.05*(1.0-(pA_ave+pB_ave+pC_ave+pE_ave+pD_ave))
 
      pA_ave=exp(muABDE-wA_ave*fracA-wB_ave*fracB-wE_ave*fracE &
-                -wD_ave*fracD)*fracA
+                -wD_ave*fracD)*(fracA/2.0)
      pB_ave=exp(muABDE-wA_ave*fracA-wB_ave*fracB-wE_ave*fracE &
-                -wD_ave*fracD)*fracB
+                -wD_ave*fracD)*(fracB/2.0)
      pC_ave=exp(kappaC*(muC-wC_ave))
      pE_ave=exp(muABDE-wA_ave*fracA-wB_ave*fracB-wE_ave*fracE &
-                -wD_ave*fracD)*fracE
+                -wD_ave*fracD)*(fracE/2.0)
      pD_ave=exp(muABDE-wA_ave*fracA-wB_ave*fracB-wE_ave*fracE &
-                -wD_ave*fracD)*fracD
+                -wD_ave*fracD)*(fracD/2.0)
 
      dwA_ave=(xAB*pB_ave+xAC*pC_ave+xAE*pE_ave+xAD*pD_ave+eta_ave)-wA_ave
      dwB_ave=(xAB*pA_ave+xBC*pC_ave+xBE*pE_ave+xBD*pD_ave+eta_ave)-wB_ave
