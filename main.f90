@@ -46,7 +46,7 @@ Program Main
   delz=D_z/real(M-1)
   
   ! Distance from the center of cylinder 
-  r_0=10.0
+  r_0=5.0
 
   ! Initial Set Up 0=Random 1=Read from file 2=make your own condition
   initial=1
@@ -62,9 +62,9 @@ Program Main
   muED_down=0
 
   ! If ten_find is on, turn off bilayer
-  bilayer=1
-  once=0
-  disk=0
+  bilayer=0
+  once=1
+  disk=1
 
   !()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()
   
@@ -238,6 +238,7 @@ Program Main
      ! Scanning over mu or radius depending on the choice of initial condition
      If ((bilayer==1).and.(once==1)) stop
 
+     If ((disk==1).and.(once==1)) stop
 
      !If (disk==1) then
       

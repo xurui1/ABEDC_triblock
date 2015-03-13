@@ -317,7 +317,7 @@ Subroutine Pressure( )
 
 End Subroutine Pressure
 !---------------------------- Calculating eta2 -------------------------------------------------
-! eta2 is used for pinnig the system in a configuration
+! eta2 is used for pinning the system in a configuration
 Subroutine Pressure2( )
   Use global
   Implicit None
@@ -330,7 +330,7 @@ Subroutine Pressure2( )
   ! Ntip and Mtip are defined in the main.f90
   Do i=Ntip,Ntip
      Do j=Mtip,Mtip
-        eta2(i,j)=eta2(i,j)-10.0*(pA(i,j)+pE(i,j)-pB(i,j)-pD(i,j))
+        eta2(i,j)=eta2(i,j)-10.0*(pB(i,j)-pD(i,j))
      End Do
   End Do
  

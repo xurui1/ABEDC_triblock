@@ -7,4 +7,4 @@
 30.0d0 30.0d0 0.0d0            # xBC,xBE,xBD
 0.0d0 30.0d0                   # xCE,xCD
 30.0d0                         # xED
-0.0d0  -5.596d0	               # muABDE muC 
+0.0d0  -5.1645d0	               # muABDE muC 
